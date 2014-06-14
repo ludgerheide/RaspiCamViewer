@@ -57,9 +57,26 @@
                                     <action selector="pauseButtonPressed:" destination="rQl-PL-IFJ" eventType="touchUpInside" id="Pau-6q-lXI"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GUU-tT-Mlz" userLabel="iPhone container View">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="481"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GJh-17-KSE" userLabel="iPhone video View" customClass="EaglUIView">
+                                        <rect key="frame" x="51" y="171" width="219" height="140"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <color key="backgroundColor" red="1" green="0.24251870336281978" blue="0.23031442151878267" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="centerX" secondItem="GJh-17-KSE" secondAttribute="centerX" id="K1q-DG-Q86"/>
+                                    <constraint firstAttribute="centerY" secondItem="GJh-17-KSE" secondAttribute="centerY" id="UDq-Ov-7Aq"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="GUU-tT-Mlz" firstAttribute="leading" secondItem="l9E-07-oys" secondAttribute="leading" id="1Ri-Yw-DNC"/>
                             <constraint firstAttribute="trailing" secondItem="jqg-sy-dxO" secondAttribute="trailing" constant="20" symbolic="YES" id="1ym-A3-aKq"/>
                             <constraint firstAttribute="trailing" secondItem="jLD-Zx-8UW" secondAttribute="trailing" constant="20" symbolic="YES" id="4Dk-5y-HmE"/>
                             <constraint firstAttribute="bottom" secondItem="GsM-g2-iQc" secondAttribute="bottom" constant="20" symbolic="YES" id="5Af-dR-p0T"/>
@@ -67,7 +84,10 @@
                             <constraint firstItem="GsM-g2-iQc" firstAttribute="top" secondItem="jLD-Zx-8UW" secondAttribute="bottom" constant="8" symbolic="YES" id="AAN-FV-9ow"/>
                             <constraint firstItem="jLD-Zx-8UW" firstAttribute="leading" secondItem="l9E-07-oys" secondAttribute="leading" constant="20" symbolic="YES" id="PaQ-fy-RKi"/>
                             <constraint firstAttribute="bottom" secondItem="jqg-sy-dxO" secondAttribute="bottom" constant="20" symbolic="YES" id="Uf2-YL-3zF"/>
+                            <constraint firstItem="GUU-tT-Mlz" firstAttribute="top" secondItem="l9E-07-oys" secondAttribute="top" id="bdy-qV-Xg7"/>
+                            <constraint firstItem="jLD-Zx-8UW" firstAttribute="top" secondItem="GUU-tT-Mlz" secondAttribute="bottom" constant="8" symbolic="YES" id="ld7-n1-DuD"/>
                             <constraint firstAttribute="bottom" secondItem="GGv-QI-rmE" secondAttribute="bottom" constant="20" symbolic="YES" id="lv1-zj-xvj"/>
+                            <constraint firstAttribute="trailing" secondItem="GUU-tT-Mlz" secondAttribute="trailing" id="pql-1j-Lhb"/>
                             <constraint firstItem="GGv-QI-rmE" firstAttribute="leading" secondItem="l9E-07-oys" secondAttribute="leading" constant="20" symbolic="YES" id="rtW-J2-Wqd"/>
                         </constraints>
                     </view>
@@ -75,6 +95,8 @@
                         <outlet property="messageLabel" destination="jLD-Zx-8UW" id="Cg7-lT-r2a"/>
                         <outlet property="pauseButton" destination="GsM-g2-iQc" id="Dee-43-OvT"/>
                         <outlet property="playButton" destination="GGv-QI-rmE" id="1dT-M2-Kcc"/>
+                        <outlet property="videoHeightConstraint" destination="pql-1j-Lhb" id="wr3-AU-MET"/>
+                        <outlet property="videoWidthConstraint" destination="bdy-qV-Xg7" id="4vs-Qw-VU3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h4L-l5-tyG" sceneMemberID="firstResponder"/>

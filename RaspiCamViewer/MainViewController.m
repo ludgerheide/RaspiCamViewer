@@ -10,21 +10,27 @@
 
 @interface MainViewController(){
     GStreamerBackend *gst_backend;
+    int media_width;
+    int media_height;
 }
 
 @end
 
 @implementation MainViewController
 
-@synthesize messageLabel, pauseButton, playButton;
+@synthesize messageLabel, pauseButton, playButton, videoContainerView, videoView, videoHeightConstraint, videoWidthConstraint;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     playButton.enabled = false;
     pauseButton.enabled = false;
+  
+    /* Make these constant for now, later tutorials will change them */
+    media_width = 320;
+    media_height = 240;
     
-    gst_backend = [[GStreamerBackend alloc] init:self];
+    gst_backend = [[GStreamerBackend alloc] init:self videoView: videoView];
 }
 
 - (IBAction)playButtonPressed:(id)sender {
@@ -33,6 +39,23 @@
 
 - (IBAction)pauseButtonPressed:(id)sender {
     [gst_backend pause];
+}
+
+- (void)viewDidLayoutSubviews
+{
+    CGFloat view_width = videoContainerView.bounds.size.width;
+    CGFloat view_height = videoContainerView.bounds.size.height;
+    
+    CGFloat correct_height = view_width * media_height / media_width;
+    CGFloat correct_width = view_height * media_width / media_height;
+    
+    if (correct_height < view_height) {
+        videoHeightConstraint.constant = correct_height;
+        videoWidthConstraint.constant = view_width;
+    } else {
+        videoWidthConstraint.constant = correct_width;
+        videoHeightConstraint.constant = view_height;
+    }
 }
 
 /*

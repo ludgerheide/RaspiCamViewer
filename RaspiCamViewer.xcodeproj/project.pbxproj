@@ -10,7 +10,6 @@
 		E4DCC60F194CBFB20053C2C3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4DCC60E194CBFB20053C2C3 /* Foundation.framework */; };
 		E4DCC611194CBFB20053C2C3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4DCC610194CBFB20053C2C3 /* CoreGraphics.framework */; };
 		E4DCC613194CBFB20053C2C3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4DCC612194CBFB20053C2C3 /* UIKit.framework */; };
-		E4DCC615194CBFB20053C2C3 /* GStreamer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4DCC614194CBFB20053C2C3 /* GStreamer.framework */; };
 		E4DCC61B194CBFB20053C2C3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E4DCC619194CBFB20053C2C3 /* InfoPlist.strings */; };
 		E4DCC61D194CBFB20053C2C3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E4DCC61C194CBFB20053C2C3 /* main.m */; };
 		E4DCC621194CBFB20053C2C3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E4DCC620194CBFB20053C2C3 /* AppDelegate.m */; };
@@ -23,6 +22,8 @@
 		E4DCC633194CBFB20053C2C3 /* gst_ios_init.m in Sources */ = {isa = PBXBuildFile; fileRef = E4DCC632194CBFB20053C2C3 /* gst_ios_init.m */; };
 		E4DCC636194CBFB20053C2C3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4DCC635194CBFB20053C2C3 /* Images.xcassets */; };
 		E4DCC654194CC0D20053C2C3 /* GStreamerBackend.m in Sources */ = {isa = PBXBuildFile; fileRef = E4DCC653194CC0D20053C2C3 /* GStreamerBackend.m */; };
+		E4E5DF48194CE0EE00AB331A /* GStreamer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4E5DF47194CE0EE00AB331A /* GStreamer.framework */; };
+		E4E5DF4B194CE38B00AB331A /* EaglUIView.m in Sources */ = {isa = PBXBuildFile; fileRef = E4E5DF4A194CE38B00AB331A /* EaglUIView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,7 +31,6 @@
 		E4DCC60E194CBFB20053C2C3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E4DCC610194CBFB20053C2C3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		E4DCC612194CBFB20053C2C3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		E4DCC614194CBFB20053C2C3 /* GStreamer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GStreamer.framework; path = Library/Frameworks/GStreamer.framework; sourceTree = DEVELOPER_DIR; };
 		E4DCC618194CBFB20053C2C3 /* RaspiCamViewer-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RaspiCamViewer-Info.plist"; sourceTree = "<group>"; };
 		E4DCC61A194CBFB20053C2C3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E4DCC61C194CBFB20053C2C3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -51,6 +51,9 @@
 		E4DCC63C194CBFB20053C2C3 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		E4DCC652194CC0D20053C2C3 /* GStreamerBackend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GStreamerBackend.h; sourceTree = "<group>"; };
 		E4DCC653194CC0D20053C2C3 /* GStreamerBackend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GStreamerBackend.m; sourceTree = "<group>"; };
+		E4E5DF47194CE0EE00AB331A /* GStreamer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GStreamer.framework; path = ../../../../Library/Developer/GStreamer/iPhone.sdk/GStreamer.framework; sourceTree = "<group>"; };
+		E4E5DF49194CE38B00AB331A /* EaglUIView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EaglUIView.h; sourceTree = "<group>"; };
+		E4E5DF4A194CE38B00AB331A /* EaglUIView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EaglUIView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,8 +61,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4E5DF48194CE0EE00AB331A /* GStreamer.framework in Frameworks */,
 				E4DCC611194CBFB20053C2C3 /* CoreGraphics.framework in Frameworks */,
-				E4DCC615194CBFB20053C2C3 /* GStreamer.framework in Frameworks */,
 				E4DCC613194CBFB20053C2C3 /* UIKit.framework in Frameworks */,
 				E4DCC60F194CBFB20053C2C3 /* Foundation.framework in Frameworks */,
 			);
@@ -88,10 +91,10 @@
 		E4DCC60D194CBFB20053C2C3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E4E5DF47194CE0EE00AB331A /* GStreamer.framework */,
 				E4DCC60E194CBFB20053C2C3 /* Foundation.framework */,
 				E4DCC610194CBFB20053C2C3 /* CoreGraphics.framework */,
 				E4DCC612194CBFB20053C2C3 /* UIKit.framework */,
-				E4DCC614194CBFB20053C2C3 /* GStreamer.framework */,
 				E4DCC63C194CBFB20053C2C3 /* XCTest.framework */,
 			);
 			name = Frameworks;
@@ -100,6 +103,8 @@
 		E4DCC616194CBFB20053C2C3 /* RaspiCamViewer */ = {
 			isa = PBXGroup;
 			children = (
+				E4E5DF49194CE38B00AB331A /* EaglUIView.h */,
+				E4E5DF4A194CE38B00AB331A /* EaglUIView.m */,
 				E4DCC61F194CBFB20053C2C3 /* AppDelegate.h */,
 				E4DCC620194CBFB20053C2C3 /* AppDelegate.m */,
 				E4DCC622194CBFB20053C2C3 /* Main_iPhone.storyboard */,
@@ -201,6 +206,7 @@
 			files = (
 				E4DCC621194CBFB20053C2C3 /* AppDelegate.m in Sources */,
 				E4DCC654194CC0D20053C2C3 /* GStreamerBackend.m in Sources */,
+				E4E5DF4B194CE38B00AB331A /* EaglUIView.m in Sources */,
 				E4DCC62A194CBFB20053C2C3 /* MainViewController.m in Sources */,
 				E4DCC62D194CBFB20053C2C3 /* FlipsideViewController.m in Sources */,
 				E4DCC61D194CBFB20053C2C3 /* main.m in Sources */,
@@ -319,6 +325,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"~/Library/Developer/GStreamer/iPhone.sdk",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(USER_LIBRARY_DIR)/Developer/GStreamer/iPhone.sdk",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RaspiCamViewer/RaspiCamViewer-Prefix.pch";
@@ -364,6 +371,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"~/Library/Developer/GStreamer/iPhone.sdk",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(USER_LIBRARY_DIR)/Developer/GStreamer/iPhone.sdk",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RaspiCamViewer/RaspiCamViewer-Prefix.pch";
@@ -419,6 +427,7 @@
 				E4DCC64E194CBFB20053C2C3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

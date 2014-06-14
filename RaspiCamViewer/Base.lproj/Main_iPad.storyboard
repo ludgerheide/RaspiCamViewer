@@ -55,18 +55,38 @@
                                     <action selector="pauseButtonPressed:" destination="aVO-UE-KGo" eventType="touchUpInside" id="4M9-Wd-fik"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2cB-uB-a98" userLabel="iPad COntainer View">
+                                <rect key="frame" x="0.0" y="44" width="768" height="922"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fgq-Gh-hNq" userLabel="iPad video View" customClass="EaglUIView">
+                                        <rect key="frame" x="158" y="219" width="452" height="484"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <color key="backgroundColor" red="0.7242489339" green="1" blue="0.45826098949999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="centerX" secondItem="Fgq-Gh-hNq" secondAttribute="centerX" id="R3x-N8-kWw"/>
+                                    <constraint firstAttribute="centerY" secondItem="Fgq-Gh-hNq" secondAttribute="centerY" id="RKP-ws-MOW"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="z7z-Zm-Nr6" secondAttribute="bottom" constant="20" symbolic="YES" id="3MF-9R-Yfu"/>
                             <constraint firstItem="dJ6-Ol-ypB" firstAttribute="leading" secondItem="z7z-Zm-Nr6" secondAttribute="trailing" constant="8" symbolic="YES" id="3Vq-sn-Ba8"/>
                             <constraint firstAttribute="trailing" secondItem="ymY-Nf-saS" secondAttribute="trailing" constant="20" symbolic="YES" id="71W-Hc-bLq"/>
+                            <constraint firstItem="2cB-uB-a98" firstAttribute="leading" secondItem="mX8-Ee-eGC" secondAttribute="leading" id="Apf-1A-ZoI"/>
+                            <constraint firstItem="dJ6-Ol-ypB" firstAttribute="top" secondItem="2cB-uB-a98" secondAttribute="bottom" constant="8" symbolic="YES" id="F6I-ni-0En"/>
                             <constraint firstItem="S2d-ll-A4h" firstAttribute="top" secondItem="mX8-Ee-eGC" secondAttribute="top" id="Kzf-4S-Y7T"/>
+                            <constraint firstAttribute="trailing" secondItem="2cB-uB-a98" secondAttribute="trailing" id="V4e-nd-rmY"/>
                             <constraint firstItem="ymY-Nf-saS" firstAttribute="leading" secondItem="dJ6-Ol-ypB" secondAttribute="trailing" constant="8" symbolic="YES" id="gQx-L1-jbW"/>
                             <constraint firstAttribute="bottom" secondItem="dJ6-Ol-ypB" secondAttribute="bottom" constant="20" symbolic="YES" id="j8H-AE-Mgx"/>
                             <constraint firstItem="S2d-ll-A4h" firstAttribute="leading" secondItem="mX8-Ee-eGC" secondAttribute="leading" id="jbs-cd-p3c"/>
                             <constraint firstAttribute="bottom" secondItem="ymY-Nf-saS" secondAttribute="bottom" constant="25" id="pLQ-dA-vNS"/>
                             <constraint firstItem="S2d-ll-A4h" firstAttribute="trailing" secondItem="mX8-Ee-eGC" secondAttribute="trailing" id="sah-fe-1aa"/>
+                            <constraint firstItem="2cB-uB-a98" firstAttribute="top" secondItem="S2d-ll-A4h" secondAttribute="bottom" id="ugX-J6-Msy"/>
                             <constraint firstItem="z7z-Zm-Nr6" firstAttribute="leading" secondItem="mX8-Ee-eGC" secondAttribute="leading" constant="20" symbolic="YES" id="umd-Mb-k9e"/>
                         </constraints>
                     </view>
@@ -74,6 +94,10 @@
                         <outlet property="messageLabel" destination="ymY-Nf-saS" id="84d-ch-PER"/>
                         <outlet property="pauseButton" destination="dJ6-Ol-ypB" id="zBh-Ip-bu1"/>
                         <outlet property="playButton" destination="z7z-Zm-Nr6" id="znb-Y8-Y1d"/>
+                        <outlet property="videoContainerView" destination="2cB-uB-a98" id="NgH-yz-JPK"/>
+                        <outlet property="videoHeightConstraint" destination="V4e-nd-rmY" id="nCv-IS-e2Y"/>
+                        <outlet property="videoView" destination="Fgq-Gh-hNq" id="R5I-tL-dlN"/>
+                        <outlet property="videoWidthConstraint" destination="ugX-J6-Msy" id="Jw4-Zd-NZY"/>
                         <segue destination="FTa-do-hRx" kind="popover" identifier="showAlternate" popoverAnchorBarButtonItem="eoT-a4-CEx" id="pXF-iP-W5x">
                             <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
                         </segue>

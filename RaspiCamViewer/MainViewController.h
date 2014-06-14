@@ -15,5 +15,9 @@
 @property (weak, nonatomic) IBOutlet UILabel *messageLabel;
 @property (weak, nonatomic) IBOutlet UIButton *playButton;
 @property (weak, nonatomic) IBOutlet UIButton *pauseButton;
+@property (weak, nonatomic) IBOutlet UIView *videoContainerView;
+@property (weak, nonatomic) IBOutlet UIView *videoView;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *videoWidthConstraint;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *videoHeightConstraint;
 
 @end

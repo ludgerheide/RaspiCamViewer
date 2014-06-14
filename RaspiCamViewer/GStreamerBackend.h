@@ -15,6 +15,7 @@
 
 @interface GStreamerBackend : NSObject
 
+-(id) init:(id)uiDelegate videoView:(UIView *)video_view;
 -(id)init: (id)uiDelegate;
 -(NSString*) getGStreamerVersion;
 -(void) play;
