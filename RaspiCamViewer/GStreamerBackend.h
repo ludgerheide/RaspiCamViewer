@@ -8,8 +8,16 @@
 
 #import <Foundation/Foundation.h>
 
+@protocol GSTreamerBackendDelegate
+-(void) gstreamerSetUIMessage:(NSString *)message;
+-(void) gstreamerInitialized;
+@end
+
 @interface GStreamerBackend : NSObject
 
+-(id)init: (id)uiDelegate;
 -(NSString*) getGStreamerVersion;
+-(void) play;
+-(void) pause;
 
 @end

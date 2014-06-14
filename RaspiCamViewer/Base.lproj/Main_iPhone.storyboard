@@ -30,22 +30,51 @@
                                     <segue destination="kIf-nA-PKG" kind="modal" identifier="showAlternate" modalTransitionStyle="flipHorizontal" id="ZEO-Qe-X3j"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jLD-Zx-8UW">
-                                <rect key="frame" x="20" y="20" width="280" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jLD-Zx-8UW">
+                                <rect key="frame" x="20" y="489" width="280" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GGv-QI-rmE">
+                                <rect key="frame" x="20" y="518" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Play">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playButtonPressed:" destination="rQl-PL-IFJ" eventType="touchUpInside" id="dYI-do-yM0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GsM-g2-iQc">
+                                <rect key="frame" x="58" y="518" width="43" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Pause">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="pauseButtonPressed:" destination="rQl-PL-IFJ" eventType="touchUpInside" id="Pau-6q-lXI"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="jqg-sy-dxO" secondAttribute="trailing" constant="20" symbolic="YES" id="1ym-A3-aKq"/>
+                            <constraint firstAttribute="trailing" secondItem="jLD-Zx-8UW" secondAttribute="trailing" constant="20" symbolic="YES" id="4Dk-5y-HmE"/>
+                            <constraint firstAttribute="bottom" secondItem="GsM-g2-iQc" secondAttribute="bottom" constant="20" symbolic="YES" id="5Af-dR-p0T"/>
+                            <constraint firstItem="GsM-g2-iQc" firstAttribute="leading" secondItem="GGv-QI-rmE" secondAttribute="trailing" constant="8" symbolic="YES" id="9Gg-xN-eEV"/>
+                            <constraint firstItem="GsM-g2-iQc" firstAttribute="top" secondItem="jLD-Zx-8UW" secondAttribute="bottom" constant="8" symbolic="YES" id="AAN-FV-9ow"/>
+                            <constraint firstItem="jLD-Zx-8UW" firstAttribute="leading" secondItem="l9E-07-oys" secondAttribute="leading" constant="20" symbolic="YES" id="PaQ-fy-RKi"/>
                             <constraint firstAttribute="bottom" secondItem="jqg-sy-dxO" secondAttribute="bottom" constant="20" symbolic="YES" id="Uf2-YL-3zF"/>
+                            <constraint firstAttribute="bottom" secondItem="GGv-QI-rmE" secondAttribute="bottom" constant="20" symbolic="YES" id="lv1-zj-xvj"/>
+                            <constraint firstItem="GGv-QI-rmE" firstAttribute="leading" secondItem="l9E-07-oys" secondAttribute="leading" constant="20" symbolic="YES" id="rtW-J2-Wqd"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="versionLabel" destination="jLD-Zx-8UW" id="XcL-AY-lzv"/>
+                        <outlet property="messageLabel" destination="jLD-Zx-8UW" id="Cg7-lT-r2a"/>
+                        <outlet property="pauseButton" destination="GsM-g2-iQc" id="Dee-43-OvT"/>
+                        <outlet property="playButton" destination="GGv-QI-rmE" id="1dT-M2-Kcc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h4L-l5-tyG" sceneMemberID="firstResponder"/>

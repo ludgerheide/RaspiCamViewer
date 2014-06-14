@@ -7,7 +7,6 @@
 //
 
 #import "MainViewController.h"
-#import "GStreamerBackend.h"
 
 @interface MainViewController(){
     GStreamerBackend *gst_backend;
@@ -17,14 +16,41 @@
 
 @implementation MainViewController
 
-@synthesize versionLabel;
+@synthesize messageLabel, pauseButton, playButton;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
-    gst_backend = [[GStreamerBackend alloc] init];
-    versionLabel.text = gst_backend.getGStreamerVersion;
+    playButton.enabled = false;
+    pauseButton.enabled = false;
+    
+    gst_backend = [[GStreamerBackend alloc] init:self];
+}
+
+- (IBAction)playButtonPressed:(id)sender {
+    [gst_backend play];
+}
+
+- (IBAction)pauseButtonPressed:(id)sender {
+    [gst_backend pause];
+}
+
+/*
+ * Methods from GstreamerBackendDelegate
+ */
+
+-(void) gstreamerInitialized {
+    dispatch_async(dispatch_get_main_queue(), ^{
+        playButton.enabled = TRUE;
+        pauseButton.enabled = TRUE;
+        messageLabel.text = @"Ready";
+    });
+}
+
+-(void) gstreamerSetUIMessage:(NSString *)message {
+    dispatch_async(dispatch_get_main_queue(), ^{
+        messageLabel.text = message;
+    });
 }
 
 - (void)didReceiveMemoryWarning
