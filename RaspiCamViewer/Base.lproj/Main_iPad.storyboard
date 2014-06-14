@@ -59,7 +59,7 @@
                                 <rect key="frame" x="0.0" y="44" width="768" height="922"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fgq-Gh-hNq" userLabel="iPad video View" customClass="EaglUIView">
+                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fgq-Gh-hNq" userLabel="iPad video View" customClass="GLKView">
                                         <rect key="frame" x="158" y="219" width="452" height="484"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <color key="backgroundColor" red="0.7242489339" green="1" blue="0.45826098949999999" alpha="1" colorSpace="calibratedRGB"/>
