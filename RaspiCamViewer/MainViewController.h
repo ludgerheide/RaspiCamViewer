@@ -11,5 +11,6 @@
 @interface MainViewController : UIViewController <FlipsideViewControllerDelegate, UIPopoverControllerDelegate>
 
 @property (strong, nonatomic) UIPopoverController *flipsidePopoverController;
+@property (weak, nonatomic) IBOutlet UILabel *versionLabel;
 
 @end

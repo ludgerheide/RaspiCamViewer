@@ -7,17 +7,24 @@
 //
 
 #import "MainViewController.h"
+#import "GStreamerBackend.h"
 
-@interface MainViewController ()
+@interface MainViewController(){
+    GStreamerBackend *gst_backend;
+}
 
 @end
 
 @implementation MainViewController
 
+@synthesize versionLabel;
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    gst_backend = [[GStreamerBackend alloc] init];
+    versionLabel.text = gst_backend.getGStreamerVersion;
 }
 
 - (void)didReceiveMemoryWarning

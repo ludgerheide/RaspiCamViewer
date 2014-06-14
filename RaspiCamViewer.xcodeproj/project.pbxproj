@@ -22,22 +22,8 @@
 		E4DCC631194CBFB20053C2C3 /* Ubuntu-R.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E4DCC630194CBFB20053C2C3 /* Ubuntu-R.ttf */; };
 		E4DCC633194CBFB20053C2C3 /* gst_ios_init.m in Sources */ = {isa = PBXBuildFile; fileRef = E4DCC632194CBFB20053C2C3 /* gst_ios_init.m */; };
 		E4DCC636194CBFB20053C2C3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4DCC635194CBFB20053C2C3 /* Images.xcassets */; };
-		E4DCC63D194CBFB20053C2C3 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4DCC63C194CBFB20053C2C3 /* XCTest.framework */; };
-		E4DCC63E194CBFB20053C2C3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4DCC60E194CBFB20053C2C3 /* Foundation.framework */; };
-		E4DCC63F194CBFB20053C2C3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4DCC612194CBFB20053C2C3 /* UIKit.framework */; };
-		E4DCC647194CBFB20053C2C3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E4DCC645194CBFB20053C2C3 /* InfoPlist.strings */; };
-		E4DCC649194CBFB20053C2C3 /* RaspiCamViewerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E4DCC648194CBFB20053C2C3 /* RaspiCamViewerTests.m */; };
+		E4DCC654194CC0D20053C2C3 /* GStreamerBackend.m in Sources */ = {isa = PBXBuildFile; fileRef = E4DCC653194CC0D20053C2C3 /* GStreamerBackend.m */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		E4DCC640194CBFB20053C2C3 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E4DCC603194CBFB20053C2C3 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = E4DCC60A194CBFB20053C2C3;
-			remoteInfo = RaspiCamViewer;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		E4DCC60B194CBFB20053C2C3 /* RaspiCamViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RaspiCamViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -62,11 +48,9 @@
 		E4DCC632194CBFB20053C2C3 /* gst_ios_init.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = gst_ios_init.m; sourceTree = "<group>"; };
 		E4DCC634194CBFB20053C2C3 /* gst_ios_init.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = gst_ios_init.h; sourceTree = "<group>"; };
 		E4DCC635194CBFB20053C2C3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		E4DCC63B194CBFB20053C2C3 /* RaspiCamViewerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RaspiCamViewerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4DCC63C194CBFB20053C2C3 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		E4DCC644194CBFB20053C2C3 /* RaspiCamViewerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RaspiCamViewerTests-Info.plist"; sourceTree = "<group>"; };
-		E4DCC646194CBFB20053C2C3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		E4DCC648194CBFB20053C2C3 /* RaspiCamViewerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RaspiCamViewerTests.m; sourceTree = "<group>"; };
+		E4DCC652194CC0D20053C2C3 /* GStreamerBackend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GStreamerBackend.h; sourceTree = "<group>"; };
+		E4DCC653194CC0D20053C2C3 /* GStreamerBackend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GStreamerBackend.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,16 +65,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E4DCC638194CBFB20053C2C3 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E4DCC63D194CBFB20053C2C3 /* XCTest.framework in Frameworks */,
-				E4DCC63F194CBFB20053C2C3 /* UIKit.framework in Frameworks */,
-				E4DCC63E194CBFB20053C2C3 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -98,7 +72,6 @@
 			isa = PBXGroup;
 			children = (
 				E4DCC616194CBFB20053C2C3 /* RaspiCamViewer */,
-				E4DCC642194CBFB20053C2C3 /* RaspiCamViewerTests */,
 				E4DCC60D194CBFB20053C2C3 /* Frameworks */,
 				E4DCC60C194CBFB20053C2C3 /* Products */,
 			);
@@ -108,7 +81,6 @@
 			isa = PBXGroup;
 			children = (
 				E4DCC60B194CBFB20053C2C3 /* RaspiCamViewer.app */,
-				E4DCC63B194CBFB20053C2C3 /* RaspiCamViewerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -134,6 +106,8 @@
 				E4DCC625194CBFB20053C2C3 /* Main_iPad.storyboard */,
 				E4DCC628194CBFB20053C2C3 /* MainViewController.h */,
 				E4DCC629194CBFB20053C2C3 /* MainViewController.m */,
+				E4DCC652194CC0D20053C2C3 /* GStreamerBackend.h */,
+				E4DCC653194CC0D20053C2C3 /* GStreamerBackend.m */,
 				E4DCC62B194CBFB20053C2C3 /* FlipsideViewController.h */,
 				E4DCC62C194CBFB20053C2C3 /* FlipsideViewController.m */,
 				E4DCC635194CBFB20053C2C3 /* Images.xcassets */,
@@ -153,24 +127,6 @@
 				E4DCC630194CBFB20053C2C3 /* Ubuntu-R.ttf */,
 				E4DCC632194CBFB20053C2C3 /* gst_ios_init.m */,
 				E4DCC634194CBFB20053C2C3 /* gst_ios_init.h */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		E4DCC642194CBFB20053C2C3 /* RaspiCamViewerTests */ = {
-			isa = PBXGroup;
-			children = (
-				E4DCC648194CBFB20053C2C3 /* RaspiCamViewerTests.m */,
-				E4DCC643194CBFB20053C2C3 /* Supporting Files */,
-			);
-			path = RaspiCamViewerTests;
-			sourceTree = "<group>";
-		};
-		E4DCC643194CBFB20053C2C3 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				E4DCC644194CBFB20053C2C3 /* RaspiCamViewerTests-Info.plist */,
-				E4DCC645194CBFB20053C2C3 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -195,24 +151,6 @@
 			productReference = E4DCC60B194CBFB20053C2C3 /* RaspiCamViewer.app */;
 			productType = "com.apple.product-type.application";
 		};
-		E4DCC63A194CBFB20053C2C3 /* RaspiCamViewerTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = E4DCC64F194CBFB20053C2C3 /* Build configuration list for PBXNativeTarget "RaspiCamViewerTests" */;
-			buildPhases = (
-				E4DCC637194CBFB20053C2C3 /* Sources */,
-				E4DCC638194CBFB20053C2C3 /* Frameworks */,
-				E4DCC639194CBFB20053C2C3 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				E4DCC641194CBFB20053C2C3 /* PBXTargetDependency */,
-			);
-			name = RaspiCamViewerTests;
-			productName = RaspiCamViewerTests;
-			productReference = E4DCC63B194CBFB20053C2C3 /* RaspiCamViewerTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -221,11 +159,6 @@
 			attributes = {
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "LH Technologies";
-				TargetAttributes = {
-					E4DCC63A194CBFB20053C2C3 = {
-						TestTargetID = E4DCC60A194CBFB20053C2C3;
-					};
-				};
 			};
 			buildConfigurationList = E4DCC606194CBFB20053C2C3 /* Build configuration list for PBXProject "RaspiCamViewer" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -241,7 +174,6 @@
 			projectRoot = "";
 			targets = (
 				E4DCC60A194CBFB20053C2C3 /* RaspiCamViewer */,
-				E4DCC63A194CBFB20053C2C3 /* RaspiCamViewerTests */,
 			);
 		};
 /* End PBXProject section */
@@ -260,14 +192,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E4DCC639194CBFB20053C2C3 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E4DCC647194CBFB20053C2C3 /* InfoPlist.strings in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -276,6 +200,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4DCC621194CBFB20053C2C3 /* AppDelegate.m in Sources */,
+				E4DCC654194CC0D20053C2C3 /* GStreamerBackend.m in Sources */,
 				E4DCC62A194CBFB20053C2C3 /* MainViewController.m in Sources */,
 				E4DCC62D194CBFB20053C2C3 /* FlipsideViewController.m in Sources */,
 				E4DCC61D194CBFB20053C2C3 /* main.m in Sources */,
@@ -283,23 +208,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E4DCC637194CBFB20053C2C3 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E4DCC649194CBFB20053C2C3 /* RaspiCamViewerTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		E4DCC641194CBFB20053C2C3 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = E4DCC60A194CBFB20053C2C3 /* RaspiCamViewer */;
-			targetProxy = E4DCC640194CBFB20053C2C3 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		E4DCC619194CBFB20053C2C3 /* InfoPlist.strings */ = {
@@ -324,14 +233,6 @@
 				E4DCC626194CBFB20053C2C3 /* Base */,
 			);
 			name = Main_iPad.storyboard;
-			sourceTree = "<group>";
-		};
-		E4DCC645194CBFB20053C2C3 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E4DCC646194CBFB20053C2C3 /* en */,
-			);
-			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -499,46 +400,6 @@
 			};
 			name = Release;
 		};
-		E4DCC650194CBFB20053C2C3 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/RaspiCamViewer.app/RaspiCamViewer";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "RaspiCamViewer/RaspiCamViewer-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "RaspiCamViewerTests/RaspiCamViewerTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Debug;
-		};
-		E4DCC651194CBFB20053C2C3 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/RaspiCamViewer.app/RaspiCamViewer";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "RaspiCamViewer/RaspiCamViewer-Prefix.pch";
-				INFOPLIST_FILE = "RaspiCamViewerTests/RaspiCamViewerTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -556,14 +417,6 @@
 			buildConfigurations = (
 				E4DCC64D194CBFB20053C2C3 /* Debug */,
 				E4DCC64E194CBFB20053C2C3 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-		};
-		E4DCC64F194CBFB20053C2C3 /* Build configuration list for PBXNativeTarget "RaspiCamViewerTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				E4DCC650194CBFB20053C2C3 /* Debug */,
-				E4DCC651194CBFB20053C2C3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
