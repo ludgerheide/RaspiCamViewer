@@ -28,14 +28,7 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ymY-Nf-saS">
-                                <rect key="frame" x="109" y="978" width="639" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z7z-Zm-Nr6">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z7z-Zm-Nr6">
                                 <rect key="frame" x="20" y="974" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Play">
@@ -45,7 +38,7 @@
                                     <action selector="playButtonPressed:" destination="aVO-UE-KGo" eventType="touchUpInside" id="A2p-fr-IF8"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dJ6-Ol-ypB">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dJ6-Ol-ypB">
                                 <rect key="frame" x="58" y="974" width="43" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Pause">
@@ -59,45 +52,54 @@
                                 <rect key="frame" x="0.0" y="44" width="768" height="922"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fgq-Gh-hNq" userLabel="iPad video View" customClass="GLKView">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fgq-Gh-hNq" userLabel="iPad video View" customClass="EaglUIView">
                                         <rect key="frame" x="158" y="219" width="452" height="484"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <color key="backgroundColor" red="0.7242489339" green="1" blue="0.45826098949999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="484" id="Kgh-HN-mZf"/>
+                                            <constraint firstAttribute="width" constant="452" id="wUg-CV-QZr"/>
+                                        </constraints>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="centerX" secondItem="Fgq-Gh-hNq" secondAttribute="centerX" id="R3x-N8-kWw"/>
-                                    <constraint firstAttribute="centerY" secondItem="Fgq-Gh-hNq" secondAttribute="centerY" id="RKP-ws-MOW"/>
+                                    <constraint firstItem="Fgq-Gh-hNq" firstAttribute="centerX" secondItem="2cB-uB-a98" secondAttribute="centerX" id="R3x-N8-kWw"/>
+                                    <constraint firstItem="Fgq-Gh-hNq" firstAttribute="centerY" secondItem="2cB-uB-a98" secondAttribute="centerY" id="RKP-ws-MOW"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ywa-to-t2C">
+                                <rect key="frame" x="706" y="978" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="z7z-Zm-Nr6" secondAttribute="bottom" constant="20" symbolic="YES" id="3MF-9R-Yfu"/>
                             <constraint firstItem="dJ6-Ol-ypB" firstAttribute="leading" secondItem="z7z-Zm-Nr6" secondAttribute="trailing" constant="8" symbolic="YES" id="3Vq-sn-Ba8"/>
-                            <constraint firstAttribute="trailing" secondItem="ymY-Nf-saS" secondAttribute="trailing" constant="20" symbolic="YES" id="71W-Hc-bLq"/>
                             <constraint firstItem="2cB-uB-a98" firstAttribute="leading" secondItem="mX8-Ee-eGC" secondAttribute="leading" id="Apf-1A-ZoI"/>
                             <constraint firstItem="dJ6-Ol-ypB" firstAttribute="top" secondItem="2cB-uB-a98" secondAttribute="bottom" constant="8" symbolic="YES" id="F6I-ni-0En"/>
                             <constraint firstItem="S2d-ll-A4h" firstAttribute="top" secondItem="mX8-Ee-eGC" secondAttribute="top" id="Kzf-4S-Y7T"/>
                             <constraint firstAttribute="trailing" secondItem="2cB-uB-a98" secondAttribute="trailing" id="V4e-nd-rmY"/>
-                            <constraint firstItem="ymY-Nf-saS" firstAttribute="leading" secondItem="dJ6-Ol-ypB" secondAttribute="trailing" constant="8" symbolic="YES" id="gQx-L1-jbW"/>
                             <constraint firstAttribute="bottom" secondItem="dJ6-Ol-ypB" secondAttribute="bottom" constant="20" symbolic="YES" id="j8H-AE-Mgx"/>
                             <constraint firstItem="S2d-ll-A4h" firstAttribute="leading" secondItem="mX8-Ee-eGC" secondAttribute="leading" id="jbs-cd-p3c"/>
-                            <constraint firstAttribute="bottom" secondItem="ymY-Nf-saS" secondAttribute="bottom" constant="25" id="pLQ-dA-vNS"/>
+                            <constraint firstItem="Qaj-yK-c03" firstAttribute="top" secondItem="ywa-to-t2C" secondAttribute="bottom" constant="25" id="rm3-ke-SaB"/>
                             <constraint firstItem="S2d-ll-A4h" firstAttribute="trailing" secondItem="mX8-Ee-eGC" secondAttribute="trailing" id="sah-fe-1aa"/>
                             <constraint firstItem="2cB-uB-a98" firstAttribute="top" secondItem="S2d-ll-A4h" secondAttribute="bottom" id="ugX-J6-Msy"/>
                             <constraint firstItem="z7z-Zm-Nr6" firstAttribute="leading" secondItem="mX8-Ee-eGC" secondAttribute="leading" constant="20" symbolic="YES" id="umd-Mb-k9e"/>
+                            <constraint firstAttribute="trailing" secondItem="ywa-to-t2C" secondAttribute="trailing" constant="20" symbolic="YES" id="vNf-RE-0xE"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="messageLabel" destination="ymY-Nf-saS" id="84d-ch-PER"/>
                         <outlet property="pauseButton" destination="dJ6-Ol-ypB" id="zBh-Ip-bu1"/>
                         <outlet property="playButton" destination="z7z-Zm-Nr6" id="znb-Y8-Y1d"/>
                         <outlet property="videoContainerView" destination="2cB-uB-a98" id="NgH-yz-JPK"/>
-                        <outlet property="videoHeightConstraint" destination="V4e-nd-rmY" id="nCv-IS-e2Y"/>
+                        <outlet property="videoHeightConstraint" destination="Kgh-HN-mZf" id="4ga-5g-tVs"/>
                         <outlet property="videoView" destination="Fgq-Gh-hNq" id="R5I-tL-dlN"/>
-                        <outlet property="videoWidthConstraint" destination="ugX-J6-Msy" id="Jw4-Zd-NZY"/>
+                        <outlet property="videoWidthConstraint" destination="wUg-CV-QZr" id="dJn-6t-yTb"/>
                         <segue destination="FTa-do-hRx" kind="popover" identifier="showAlternate" popoverAnchorBarButtonItem="eoT-a4-CEx" id="pXF-iP-W5x">
                             <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
                         </segue>
