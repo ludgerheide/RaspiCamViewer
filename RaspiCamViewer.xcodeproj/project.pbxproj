@@ -28,6 +28,9 @@
 
 /* Begin PBXFileReference section */
 		E4BD92C1194D9E6C00426FAC /* GStreamer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GStreamer.framework; path = ../../../../../Library/Developer/GStreamer/iPhone.sdk/GStreamer.framework; sourceTree = "<group>"; };
+		E4BD92C3194DAFD300426FAC /* stream.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; name = stream.sh; path = ../stream.sh; sourceTree = "<group>"; };
+		E4BD92C4194DB11E00426FAC /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		E4BD92C5194DB11E00426FAC /* README */ = {isa = PBXFileReference; lastKnownFileType = text; name = README; path = ../README; sourceTree = "<group>"; };
 		E4DCC60B194CBFB20053C2C3 /* RaspiCamViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RaspiCamViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4DCC60E194CBFB20053C2C3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E4DCC610194CBFB20053C2C3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -124,6 +127,9 @@
 		E4DCC617194CBFB20053C2C3 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E4BD92C4194DB11E00426FAC /* LICENSE */,
+				E4BD92C5194DB11E00426FAC /* README */,
+				E4BD92C3194DAFD300426FAC /* stream.sh */,
 				E4DCC618194CBFB20053C2C3 /* RaspiCamViewer-Info.plist */,
 				E4DCC619194CBFB20053C2C3 /* InfoPlist.strings */,
 				E4DCC61C194CBFB20053C2C3 /* main.m */,

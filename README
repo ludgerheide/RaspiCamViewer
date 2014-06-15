@@ -1,0 +1,6 @@
+This package allows you to stream video from your Raspberry Pi Camera to an iOS device.
+YOU WILL NEED TO CHANGE THE IP ADDRESS IN stream.sh 
+On the iOS device, you will need a developer license and the GStreamer SDK (http://gstreamer.freedesktop.org/data/pkg/ios/)
+On the Raspberry Pi, follow the instructions from pi.gbaman.info/?p=150 to install the GStreamer software suite, but instead of using the code shown there execute the stream.sh from this repo on the Raspberry Pi.
+
+All Code Licensed under the WTFPL
