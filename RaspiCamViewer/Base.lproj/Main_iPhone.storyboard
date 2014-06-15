@@ -101,6 +101,7 @@
                         <outlet property="playButton" destination="GGv-QI-rmE" id="1dT-M2-Kcc"/>
                         <outlet property="videoContainerView" destination="GUU-tT-Mlz" id="Y6x-xT-p8k"/>
                         <outlet property="videoHeightConstraint" destination="8PI-OM-oAP" id="V52-cM-asg"/>
+                        <outlet property="videoView" destination="GJh-17-KSE" id="brU-d8-Q3z"/>
                         <outlet property="videoWidthConstraint" destination="QUA-yN-jGH" id="BFo-L6-CWc"/>
                     </connections>
                 </viewController>

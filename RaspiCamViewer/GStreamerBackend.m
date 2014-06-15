@@ -112,6 +112,7 @@ GST_DEBUG_CATEGORY_STATIC (debug_category);
     NSString *string = [NSString stringWithUTF8String:message];
     if(ui_delegate && [ui_delegate respondsToSelector:@selector(gstreamerSetUIMessage:)])
     {
+        NSLog(@"%s", message);
         [ui_delegate gstreamerSetUIMessage:string];
     }
 }
@@ -173,7 +174,7 @@ static void state_changed_cb (GstBus *bus, GstMessage *msg, GStreamerBackend *se
     g_main_context_push_thread_default(context);
     
     /* Build pipeline */
-    pipeline = gst_parse_launch("videotestsrc ! warptv ! ffmpegcolorspace ! autovideosink", &error);
+    pipeline = gst_parse_launch("videotestsrc ! videoconvert ! warptv ! autovideosink", &error);
     if (error) {
         gchar *message = g_strdup_printf("Unable to build pipeline: %s", error->message);
         g_clear_error (&error);
