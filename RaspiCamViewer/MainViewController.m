@@ -27,8 +27,8 @@
     pauseButton.enabled = false;
   
     /* Make these constant for now, later tutorials will change them */
-    media_width = 320;
-    media_height = 240;
+    media_width = 16;
+    media_height = 9;
     
     gst_backend = [[GStreamerBackend alloc] init:self videoView: videoView];
 }

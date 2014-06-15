@@ -94,6 +94,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="messageLabel" destination="ywa-to-t2C" id="z03-iH-JxF"/>
                         <outlet property="pauseButton" destination="dJ6-Ol-ypB" id="zBh-Ip-bu1"/>
                         <outlet property="playButton" destination="z7z-Zm-Nr6" id="znb-Y8-Y1d"/>
                         <outlet property="videoContainerView" destination="2cB-uB-a98" id="NgH-yz-JPK"/>

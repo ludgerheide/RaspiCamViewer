@@ -174,7 +174,7 @@ static void state_changed_cb (GstBus *bus, GstMessage *msg, GStreamerBackend *se
     g_main_context_push_thread_default(context);
     
     /* Build pipeline */
-    pipeline = gst_parse_launch("videotestsrc ! videoconvert ! warptv ! autovideosink", &error);
+    pipeline = gst_parse_launch("udpsrc port=5000 caps=application/x-rtp,media=(string)video,clock-rate=(int)90000,encoding-name=(string)H264,payload=(int)96 ! rtph264depay ! avdec_h264 ! videoconvert ! autovideosink", &error);
     if (error) {
         gchar *message = g_strdup_printf("Unable to build pipeline: %s", error->message);
         g_clear_error (&error);
